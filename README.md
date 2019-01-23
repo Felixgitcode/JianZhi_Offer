@@ -72,8 +72,8 @@ public boolean find1(int target, int[][] array) {
 利用辅助空间，创建一个字符数组用来存放字符串，然后利用for循环遍历一遍，遇到空格直接接上“%20”。
 ```javascript
 public String replaceSpace(StringBuffer str) {
-		String s = str.toString();
-		char[] c = s.toCharArray();
+	String s = str.toString();
+	char[] c = s.toCharArray();
     	StringBuilder sb = new StringBuilder();
     	
     	for(int i=0; i<c.length; i++){
