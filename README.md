@@ -96,8 +96,6 @@ public String replaceSpace(StringBuffer str) {
 使用栈，利用栈先进后出的特点将链表从尾到头打印
 ```javascript
 public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
-		if(listNode == null)
-			return null;
 		Stack<Integer> stack = new Stack<Integer>();
 		ArrayList<Integer> array = new ArrayList<Integer>();
 		
