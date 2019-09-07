@@ -978,12 +978,12 @@ public int moreThanHalfNum_Solution(int [] array) {
 			
 		} );
 		for(int i=0; i<input.length; i++){
-			if(maxHeap.size() == k && maxHeap.peek()>input[i]){//大根堆存满后，之后的数与堆顶比较，小于堆顶则舍弃原堆顶，再将该数加入堆
-				int temp = maxHeap.poll();
-				maxHeap.offer(input[i]);
-			}else{
-				maxHeap.offer(input[i]);
-			}
+			if(maxHeap.size() < k){
+                		maxHeap.offer(input[i]);
+            		}else if(maxHeap.peek() > input[i]){
+                		int temp = maxHeap.poll();
+                		maxHeap.offer(input[i]);
+            		}
 		}
 		for (Integer integer : maxHeap) {
 			list.add(integer);
